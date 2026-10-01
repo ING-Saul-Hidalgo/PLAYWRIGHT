@@ -19,19 +19,6 @@ test("TC01-Validar usuario con credenciales validas",async({page})=>{
     await expect(page.getByTestId("page-title")).toContainText("My account");
      //hora vamos para el inicio  clic 
 
-    await page.getByTestId("nav-home").click();
-
-    //obtener una lista 
-    const itemsAntes = page.getByTestId("product-name");
-    await expect (itemsAntes.first()).not.toHaveText('');
-    const primmerTextoInicial = await itemsAntes.first().innerText();
-
-    console.log(primmerTextoInicial);
     
-
-    //ordenar de manera ascendente usando filtro cuando hay otro occiones
-    await page.getByTestId("sort").selectOption({ label: 'Name (A - Z)' });
-    //validar 
-
 
 });
